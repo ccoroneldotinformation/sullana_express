@@ -1,21 +1,3 @@
-:root {
-    --bluePrime: #444290;
-}
-
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: var(--bluePrime);
-}
-
-/* NAV BAR */
-.section-menu {
-    font-family: 'Poppins', 'Arial';
-    font-style: normal;
-    font-weight: 600;
-    color: white;
-}
-
 /* TICKETS */
 .section-ticket {
     font-family: 'Poppins', 'Arial';
