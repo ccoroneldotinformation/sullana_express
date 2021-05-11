@@ -23,8 +23,8 @@ function resizeDataFormPasajes(resize) {
         for (i = 0; i < labels.length; i++) {
             // console.log(labels[i])
             if (i == 0) {
-                labels[i].style.width = '28%'
-                inputs[i].style.width = '28%'
+                labels[i].style.width = '30%'
+                inputs[i].style.width = '30%'
             } else {
                 if (i == 2) {
                     labels[i].classList.toggle('d-none')
@@ -32,6 +32,10 @@ function resizeDataFormPasajes(resize) {
                 }
                 labels[i].style.width = '18%'
                 inputs[i].style.width = '18%'
+                if (i == 4) {
+                    labels[i].style.width = '16%'
+                    inputs[i].style.width = '16%'
+                }
             }
         }
     } else {
@@ -45,11 +49,11 @@ function resizeDataFormPasajes(resize) {
                     labels[i].classList.toggle('d-none')
                     inputs[i].classList.toggle('d-none')
                 }
-                labels[i].style.width = '25%'
-                inputs[i].style.width = '25%'
+                labels[i].style.width = '30%'
+                inputs[i].style.width = '30%'
                 if (i == 4) {
-                    labels[i].style.width = '20%'
-                    inputs[i].style.width = '20%'
+                    labels[i].style.width = '10%'
+                    inputs[i].style.width = '10%'
                 }
             }
         }
