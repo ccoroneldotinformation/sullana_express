@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!-- Bootstrap-Datepicker 1.9.0 -->
+  <link rel="stylesheet" href="resources/bootstrap_datepicker_v1.9.0/css/bootstrap-datepicker.standalone.css">
+
+  <!-- select2 -->
+  <link rel="stylesheet" href="resources/select2_v4.0.3/css/select2.min.css">
+  <link rel="stylesheet" href="resources/select2_v4.0.3/css/select2-bootstrap4.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="resources/fontawesome_v5.15.3/css/all.css">
+
+
+  <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="stylesheet" href="assets/css/poppin-styles.css">
+  <title>SullanaExpress</title>
+</head>
+
+<body>
+
+  <section class="container section-ticket bg-white">
+
+    <div class="row p-2 d-flex justify-content-between align-items-center">
+      <span class="slogan">RESERVA TU VIAJE</span>
+      <div class="radios">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="radioConRetorno" name="customRadioInline" class="custom-control-input" checked>
+          <label class="custom-control-label" for="radioConRetorno">Ida y vuelta</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="radioSinRetorno" name="customRadioInline" class="custom-control-input">
+          <label class="custom-control-label" for="radioSinRetorno">Solo ida</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row labels">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">¿A donde viajas?</h5>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">¿Cuando viajas?</h5>
+
+        </div>
+      </div>
+      <div class="card border-0 d-none">
+        <div class="card-body">
+          <h5 class="card-title">¿Cuando vuelves?</h5>
+
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">¿Cuantos viajan?</h5>
+        </div>
+      </div>
+      <div class="d-flex">
+        <!-- <button type="button" class="btn btn-primary btn-lg mb-4">INICIA TU VIAJE</button> -->
+      </div>
+    </div>
+
+    <div class="row inputs">
+      <div class="card border-0">
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group d-inline-block">
+              <select class="form-control" id="select2Origen">
+              </select>
+            </div>
+            <div class="form-group d-inline-block text-center p-2">
+              <img src="assets/img/arrows_reverse.svg" class="img-fluid" alt="flecha reverso">
+            </div>
+            <div class="form-group d-inline-block">
+              <select class="form-control" id="select2Destino">
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-body">
+          <div class="input-group input-append date my-1" id="dateRangePickerIda">
+            <input class="form-control datepicker" id="fechaIda" placeholder="Fecha de ida" name="fechaIda">
+            <span class="input-group-addon add-on p-1">
+              <i class="far fa-calendar-alt"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 d-none">
+        <div class="card-body">
+          <div class="input-group input-append date my-1" id="dateRangePickerVuelta">
+            <input class="form-control datepicker" id="fechaVuelta" placeholder="Fecha de retorno" name="fechaVuelta">
+            <span class="input-group-addon add-on p-1">
+              <i class="far fa-calendar-alt"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-body">
+          <div class="form-group">
+            <select class="form-control" id="cboCantidadMaximaPasajeros" name="cantidadMaximaPasajeros">
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <div class="card-body">
+          <button type="button" class="btn btn-danger btn-lg mb-4">INICIA TU VIAJE</button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+
+  <!-- scripts select2 -->
+  <script src="resources/select2_v4.0.3/js/select2.min.js"></script>
+  <script src="resources/select2_v4.0.3/js/es.js"></script>
+  <script src="resources/select2_v4.0.3/applications/selects.js"></script>
+
+  <!-- scripts bootstrap-datepicker 1.9.0 -->
+  <script src="resources/bootstrap_datepicker_v1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="resources/bootstrap_datepicker_v1.9.0/js/bootstrap-datepicker.es.min.js"></script>
+  <script src="resources/bootstrap_datepicker_v1.9.0/applications/datePickerInIndex.js"></script>
+
+
+  <script src="assets/js/form-boletaje.js"></script>
+</body>
+
+</html>

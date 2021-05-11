@@ -1,0 +1,107 @@
+:root {
+    --bluePrime: #444290;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--bluePrime);
+}
+
+/* NAV BAR */
+.section-menu {
+    font-family: 'Poppins', 'Arial';
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+}
+
+/* TICKETS */
+.section-ticket {
+    font-family: 'Poppins', 'Arial';
+    font-size: 18pt;
+}
+.section-ticket .slogan {
+    font-weight: 700;
+}
+.section-ticket .radios {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* inputs */
+.section-ticket .card-title,
+.section-ticket .btn {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+.section-ticket .inputs {
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.section-ticket .inputs > .card:nth-child(1) .form-group:nth-child(2n + 1) {
+    width: 43%;
+}
+.section-ticket .inputs > .card:nth-child(1) .form-group:nth-child(2n) {
+    width: 14%;
+}
+
+.section-ticket .select2-selection {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-color: black;
+    border-radius: 0px;
+    /* background-color: yellow; */
+}
+
+.section-ticket .select2-selection__rendered,
+.section-ticket .datepicker {
+    font-family: 'Poppin', 'Arial';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.section-ticket .select2-selection__placeholder {
+    /* background-color: black; */
+    color: white;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* calendars */
+.section-ticket .inputs .input-append.date {
+    position: relative;
+}
+
+.section-ticket .inputs .input-append.date > input {
+    position: absolute;
+    width: 100%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+}
+.section-ticket .inputs .input-append.date > span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/* add users */
+.section-ticket select#cboCantidadMaximaPasajeros {
+    background-image: url(flecha.png); /*aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable*/
+    background-repeat: no-repeat;
+    background-position: right center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.section-ticket select#cboCantidadMaximaPasajeros::-ms-expand {
+    display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
+}
