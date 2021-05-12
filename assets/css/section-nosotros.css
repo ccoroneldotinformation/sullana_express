@@ -4,17 +4,6 @@
     --redPrime: #ed3237;
 }
 
-/* .section-menu {
-    background-color: var(--redPrime);
-} */
-
-/* .section-menu img {
-    fill: red !important;
-} */
-/* .section-menu #navbarNav a {
-    color: white !important;
-} */
-
 .section-historia,
 .section-somos {
     font-family: 'Poppin', 'Arial';
@@ -36,13 +25,6 @@
 .section-historia .historia-description {
     font-size: 0.8em;
 }
-
-/* .section-historia .row {
-    border: 1px solid red;
-}
-.section-historia .row .col {
-    border: 1px solid green;
-} */
 
 .section-somos {
     background-color: var(--redPrime);
