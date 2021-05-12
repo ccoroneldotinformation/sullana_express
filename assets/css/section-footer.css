@@ -3,17 +3,13 @@
     --grayPrime: gray;
 }
 
-/* body {
-    margin: 0px;
-    padding: 0px;
-    background-color: var(--bluePrime);
-} */
-
 .section-footer {
     font-family: 'Poppin', 'Arial';
     font-weight: 200;
     font-size: 16pt;
     color: white;
+    background-color: var(--grayPrime);
+    border: 1px solid var(--grayPrime);
 }
 
 .section-footer .row-menus > span {

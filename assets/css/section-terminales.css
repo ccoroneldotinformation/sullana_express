@@ -1,0 +1,9 @@
+.section-terminales {
+    font-family: 'Poppin', 'Arial';
+    font-size: 20pt;
+}
+
+.section-terminales .title {
+    font-weight: normal;
+    font-size: 1.5em;
+}

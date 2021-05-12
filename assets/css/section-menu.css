@@ -1,12 +1,13 @@
 :root {
     --bluePrime: #444290;
     --grayPrime: gray;
+    --redPrime: #ed3237;
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    background-color: var(--grayPrime);
+    /* background-color: var(--grayPrime); */
 }
 
 /* NAV BAR */

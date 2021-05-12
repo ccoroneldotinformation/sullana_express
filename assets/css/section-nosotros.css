@@ -1,0 +1,68 @@
+:root {
+    --bluePrime: #444290;
+    --grayPrime: gray;
+    --redPrime: #ed3237;
+}
+
+/* .section-menu {
+    background-color: var(--redPrime);
+} */
+
+/* .section-menu img {
+    fill: red !important;
+} */
+/* .section-menu #navbarNav a {
+    color: white !important;
+} */
+
+.section-historia,
+.section-somos {
+    font-family: 'Poppin', 'Arial';
+    font-size: 16pt;
+}
+
+.section-historia .title {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.section-historia .title:nth-child(1) {
+    color: gray;
+}
+
+.section-historia .title:nth-child(2) {
+    color: var(--redPrime);
+}
+.section-historia .historia-description {
+    font-size: 0.8em;
+}
+
+/* .section-historia .row {
+    border: 1px solid red;
+}
+.section-historia .row .col {
+    border: 1px solid green;
+} */
+
+.section-somos {
+    background-color: var(--redPrime);
+    border: 1px solid var(--redPrime);
+}
+
+.section-somos .card-header {
+    font-weight: 200;
+    font-size: 1em;
+}
+.section-somos .card-body {
+    font-weight: 100;
+    font-size: 0.8em;
+}
+/* 
+.section-somos .col {
+    border: 1px solid green;
+} */
+
+.section-historia img,
+.section-somos img {
+    border-radius: 10px;
+}
