@@ -1,0 +1,18 @@
+.section-beneficios {
+    font-family: 'Poppin', 'Arial';
+    font-size: 16pt;
+}
+.section-beneficios .title {
+    /* font-family: 'Poppin', 'Arial'; */
+    font-weight: 800;
+    font-size: 2.5em;
+}
+
+.section-beneficios .subtitle {
+    font-size: 2em;
+}
+
+.section-beneficios .row .text-center {
+    font-weight: 200;
+    font-size: 1em;
+}
