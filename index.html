@@ -135,27 +135,25 @@
             </div>
           </div>
 
-          <div class="row labels">
+          <div class="row labels d-none d-md-flex">
             <div class="card border-0">
               <div class="card-body">
-                <h5 class="card-title">¿A donde viajas?</h5>
+                <h5 class="card-title">¿A dónde viajas?</h5>
               </div>
             </div>
             <div class="card border-0">
               <div class="card-body">
-                <h5 class="card-title">¿Cuando viajas?</h5>
-
-              </div>
-            </div>
-            <div class="card border-0 d-none">
-              <div class="card-body">
-                <h5 class="card-title">¿Cuando vuelves?</h5>
-
+                <h5 class="card-title">¿Cuándo viajas?</h5>
               </div>
             </div>
             <div class="card border-0">
               <div class="card-body">
-                <h5 class="card-title">¿Cuantos viajan?</h5>
+                <h5 class="card-title">¿Cuándo vuelves?</h5>
+              </div>
+            </div>
+            <div class="card border-0">
+              <div class="card-body">
+                <h5 class="card-title">¿Cuántos viajan?</h5>
               </div>
             </div>
             <div class="d-flex">
@@ -164,25 +162,27 @@
           </div>
 
           <div class="row inputs">
-            <div class="card border-0">
-              <div class="card-body">
+            <div class="card border-0 my-2">
+              <div class="card-body ">
+                <h5 class="card-title d-md-none">¿A dónde viajas?</h5>
                 <div class="form-row">
-                  <div class="form-group d-inline-block">
+                  <div class="form-group">
                     <select class="form-control" id="select2Origen">
                     </select>
                   </div>
-                  <div class="form-group d-inline-block text-center p-2">
+                  <div class="form-group text-center p-2">
                     <img src="assets/img/arrows_reverse.svg" class="img-fluid" alt="flecha reverso">
                   </div>
-                  <div class="form-group d-inline-block">
+                  <div class="form-group">
                     <select class="form-control" id="select2Destino">
                     </select>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card border-0">
+            <div class="card border-0 my-2">
               <div class="card-body">
+                <h5 class="card-title d-md-none">¿Cuándo viajas?</h5>
                 <div class="input-group input-append date my-1" id="dateRangePickerIda">
                   <input class="form-control datepicker" id="fechaIda" placeholder="Fecha de ida" name="fechaIda">
                   <span class="input-group-addon add-on p-1">
@@ -191,8 +191,9 @@
                 </div>
               </div>
             </div>
-            <div class="card border-0 d-none">
+            <div class="card border-0 my-2">
               <div class="card-body">
+                <h5 class="card-title d-md-none">¿Cuándo vuelves?</h5>
                 <div class="input-group input-append date my-1" id="dateRangePickerVuelta">
                   <input class="form-control datepicker" id="fechaVuelta" placeholder="Fecha de retorno"
                     name="fechaVuelta">
@@ -202,8 +203,9 @@
                 </div>
               </div>
             </div>
-            <div class="card border-0">
+            <div class="card border-0 my-2">
               <div class="card-body">
+                <h5 class="card-title d-md-none">¿Cuántos viajan?</h5>
                 <div class="form-group my-1">
                   <select class="form-control" id="cboCantidadMaximaPasajeros" name="cantidadMaximaPasajeros">
                     <option value="1">1 Adulto</option>
@@ -212,7 +214,7 @@
               </div>
             </div>
             <div class="card border-0">
-              <div class="card-body">
+              <div class="card-body text-end">
                 <button type="button" class="btn btn-danger btn-lg mb-4">INICIA TU VIAJE</button>
               </div>
             </div>
@@ -228,38 +230,38 @@
 
   <section class="section-beneficios container-fluid p-0">
 
-    <div class="card border-0 text-white">
-      <img src="assets/img/banner-mesa-de-trabajo-3.png" class="img-fluid w-100" alt="mesa de trabajo 3">
-      <div class="card-img-overlay">
-        <div class="container my-5">
-          <div class="row my-4 d-flex flex-column justify-content-center align-items-center">
-            <div class="title">MEJORAMOS</div>
-            <div class="subtitle">Constantemente para ti</div>
+    <div class="card border-0 text-white bg-transparent">
+      <!-- <img src="assets/img/banner-mesa-de-trabajo-3.png" class="img-fluid w-100" alt="mesa de trabajo 3"> -->
+      <!-- <div class="card-img-overlay bg-danger"> -->
+      <div class="container my-5">
+        <div class="row my-4 d-flex flex-column justify-content-center align-items-center">
+          <div class="title text-center">MEJORAMOS</div>
+          <div class="subtitle text-center">Constantemente para ti</div>
+        </div>
+        <div class="row my-4">
+          <div class="col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
+            <img src="assets/img/beneficios-1.svg" class="h-50" alt="beneficios 1">
+            <div class="text-center">RECORRIENDO</div>
+            <div class="text-center">EL PERÚ</div>
           </div>
-          <div class="row my-4">
-            <div class="col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
-              <img src="assets/img/beneficios-1.svg" class="h-50" alt="beneficios 1">
-              <div class="text-center">RECORRIENDO</div>
-              <div class="text-center">EL PERÚ</div>
-            </div>
-            <div class="col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
-              <img src="assets/img/beneficios-2.svg" class="h-50" alt="beneficios 2">
-              <div class="text-center">FLOTA</div>
-              <div class="text-center">MODERNA</div>
-            </div>
-            <div class="col-6 col-md-3  d-flex flex-column justify-content-start align-items-center">
-              <img src="assets/img/beneficios-3.svg" class="h-50 " alt="beneficios 3">
-              <div class="text-center">MANTENIMIENTO</div>
-              <div class="text-center">CONSTANTE</div>
-            </div>
-            <div class="col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
-              <img src="assets/img/beneficios-4.svg" class="h-50 " alt="beneficios 4">
-              <div class="text-center">MONITOREO</div>
-              <div class="text-center">PERMANENTE</div>
-            </div>
+          <div class="col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
+            <img src="assets/img/beneficios-2.svg" class="h-50" alt="beneficios 2">
+            <div class="text-center">FLOTA</div>
+            <div class="text-center">MODERNA</div>
+          </div>
+          <div class="col-6 col-md-3  d-flex flex-column justify-content-start align-items-center">
+            <img src="assets/img/beneficios-3.svg" class="h-50 " alt="beneficios 3">
+            <div class="text-center">MANTENIMIENTO</div>
+            <div class="text-center">CONSTANTE</div>
+          </div>
+          <div class="col-6 col-md-3 d-flex flex-column justify-content-start align-items-center">
+            <img src="assets/img/beneficios-4.svg" class="h-50 " alt="beneficios 4">
+            <div class="text-center">MONITOREO</div>
+            <div class="text-center">PERMANENTE</div>
           </div>
         </div>
       </div>
+      <!-- </div> -->
     </div>
   </section>
 
@@ -297,7 +299,6 @@
       </div>
     </div>
   </section>
-
 
 
   <!-- scripts de bootstrap 4.6 -->

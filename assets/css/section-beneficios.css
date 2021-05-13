@@ -1,9 +1,13 @@
 .section-beneficios {
+    background-image: url(../img/banner-mesa-de-trabajo-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     font-family: 'Poppin', 'Arial';
     font-size: 16pt;
 }
 .section-beneficios .title {
-    /* font-family: 'Poppin', 'Arial'; */
     font-weight: 800;
     font-size: 2.5em;
 }
@@ -15,4 +19,16 @@
 .section-beneficios .row .text-center {
     font-weight: 200;
     font-size: 1em;
+}
+
+@media (max-width: 767.98px) {
+    .section-beneficios .title {
+        /* font-family: 'Poppin', 'Arial'; */
+        font-weight: 600;
+        font-size: 2em;
+    }
+
+    .section-beneficios .subtitle {
+        font-size: 1.5em;
+    }
 }

@@ -1,43 +1,30 @@
-/* TICKETS */
 .section-ticket {
     font-family: 'Poppins', 'Arial';
     font-size: 16pt;
 }
-.section-ticket .slogan {
-    font-weight: 700;
-}
-.section-ticket .radios {
-    font-size: 0.8em;
-    font-weight: 400;
-}
 
-/* inputs */
-.section-ticket .card-title,
-.section-ticket .btn {
-    font-size: 0.8em;
-    font-weight: 400;
-}
-.section-ticket .inputs {
-    font-size: 0.7em;
-    font-weight: bold;
-}
-
-.section-ticket .inputs > .card:nth-child(1) .form-group:nth-child(2n + 1) {
+.section-ticket .form-row .form-group:nth-child(2n + 1) {
     width: 43%;
 }
-.section-ticket .inputs > .card:nth-child(1) .form-group:nth-child(2n) {
+
+.section-ticket .form-row .form-group:nth-child(2n) {
     width: 14%;
 }
 
-.section-ticket .select2-selection {
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    border-color: black;
-    border-radius: 0px;
-    /* background-color: yellow; */
+.section-ticket .form-row .form-group select + span {
+    width: 100% !important;
 }
 
+/* pone el borde horizontal inferior a los select de origen y destino */
+.section-ticket .select2-selection {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+}
+
+/* el tipo y tamaño de letra para los inputs y selects */
 .section-ticket .select2-selection__rendered,
 .section-ticket .datepicker,
 .section-ticket select#cboCantidadMaximaPasajeros {
@@ -45,14 +32,6 @@
     font-style: italic;
     font-weight: bold;
     font-size: 0.8em;
-}
-
-.section-ticket .select2-selection__placeholder {
-    /* background-color: black; */
-    color: white;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
 }
 
 /* calendars */
@@ -90,4 +69,37 @@
 /*Evita que se muestre la flecha por defecto en versiones de IE*/
 .section-ticket select#cboCantidadMaximaPasajeros::-ms-expand {
     display: none;
+}
+
+@media (min-width: 768px) {
+    /* TICKETS */
+
+    .section-ticket .slogan {
+        font-weight: 700;
+    }
+    .section-ticket .radios {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+
+    /* inputs */
+    .section-ticket .card-title {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+    .section-ticket .inputs .form-group,
+    .section-ticket .inputs .input-group {
+        font-size: 0.7em;
+        font-weight: bold;
+    }
+    .section-ticket .inputs button {
+        font-size: 0.7em;
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .section-ticket .inputs .card {
+        width: 100%;
+    }
 }
