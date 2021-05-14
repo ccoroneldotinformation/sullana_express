@@ -1,6 +1,6 @@
 :root {
     --bluePrime: #444290;
-    --grayPrime: gray;
+    --grayPrime: rgb(74, 74, 74);
 }
 
 .section-footer {

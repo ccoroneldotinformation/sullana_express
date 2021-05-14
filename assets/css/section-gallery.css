@@ -1,0 +1,62 @@
+:root {
+    --bluePrime: #444290;
+    --grayPrime: rgb(74, 74, 74);
+    --redPrime: rgb(237, 50, 55);
+}
+
+/* SERVICIO */
+.section-servicio {
+    font-family: 'Poppin', 'Arial';
+    font-size: 16pt;
+}
+
+.section-servicio span:nth-child(2) {
+    font-weight: 400;
+    font-size: 1.2em;
+    color: var(--grayPrime);
+    padding-top: 0px !important;
+    margin-bottom: -12px;
+}
+
+.section-servicio span:nth-child(2n + 1) {
+    font-weight: 900;
+    font-size: 2em;
+    color: var(--redPrime);
+    padding-top: 0px !important;
+    margin-top: -12px;
+}
+
+.section-servicio .col-md-6 .align-self-center {
+    border-radius: 10px;
+    box-shadow: -1px 0px 4px 4px rgba(74, 74, 74, 0.4),
+        1px 0px 4px 4px rgba(74, 74, 74, 0.4);
+}
+
+.section-servicio #openGallery,
+.section-gallery #closeGallery {
+    background-color: var(--redPrime);
+}
+
+/* GALLERY */
+.section-gallery .container {
+    position: relative;
+}
+
+.section-gallery .container .arrow {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background-color: sandybrown;
+}
+.section-gallery .container .arrow-left {
+    left: 0px;
+}
+
+.section-gallery .container .arrow-right {
+    right: 0px;
+}
+
+.section-gallery .card {
+    box-shadow: 1px 0px 2px 2px rgba(0, 0, 0, 0.5),
+        -1px 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
