@@ -1,0 +1,36 @@
+:root {
+    --bluePrime: #444290;
+    --grayPrime: rgb(74, 74, 74);
+    --redPrime: rgb(237, 50, 55);
+}
+
+.section-ubication {
+    font-family: 'Poppin', 'Arial';
+    font-size: 16pt;
+}
+
+.section-ubication .row:nth-child(1) {
+    color: var(--redPrime);
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.section-ubication .location-map {
+    border-radius: 10px;
+}
+
+.section-ubication .btn-return {
+    background-color: var(--redPrime);
+    color: white;
+}
+
+.section-ubication .btn-buy {
+    background-color: white;
+    color: var(--redPrime);
+    border: 1px solid var(--redPrime);
+}
+
+.section-ubication .btn span {
+    font-size: 1.2em;
+    font-weight: 400;
+}

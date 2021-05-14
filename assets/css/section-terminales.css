@@ -1,3 +1,9 @@
+:root {
+    --bluePrime: #444290;
+    --grayPrime: rgb(74, 74, 74);
+    --redPrime: rgb(237, 50, 55);
+}
+
 .section-terminales {
     font-family: 'Poppin', 'Arial';
     font-size: 20pt;
@@ -6,4 +12,19 @@
 .section-terminales .title {
     font-weight: normal;
     font-size: 1.5em;
+}
+
+.section-terminales .card .card-img-overlay {
+    display: none;
+}
+
+.section-terminales .card {
+    cursor: pointer;
+}
+
+.section-terminales .card:hover .card-img-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(237, 50, 55, 0.5);
 }
