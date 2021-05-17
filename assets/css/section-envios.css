@@ -1,0 +1,16 @@
+.section-envios {
+    background-image: url(../img/envios.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-envios .row .col-md-6 img {
+    border-radius: 10px;
+    box-shadow: 1px 0px 4px 2px rgba(0, 0, 0, 0.2),
+        -1px 0px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section-envios .row .col-md-6 img:nth-child(2) {
+    border-radius: 20px;
+}

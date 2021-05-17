@@ -102,4 +102,13 @@
     .section-ticket .inputs .card {
         width: 100%;
     }
+
+    .section-ticket > .row:nth-child(1) > * {
+        margin: 0px auto;
+    }
+
+    .section-ticket .radios label {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
 }
