@@ -2,6 +2,7 @@
     --bluePrime: #444290;
     --grayPrime: rgb(74, 74, 74);
     --redPrime: rgb(237, 50, 55);
+    --numberElements: 5;
 }
 
 /* SERVICIO */
@@ -26,37 +27,91 @@
     margin-top: -12px;
 }
 
-.section-servicio .col-md-6 .align-self-center {
+.section-servicio .col-image .align-self-center {
     border-radius: 10px;
     box-shadow: -1px 0px 4px 4px rgba(74, 74, 74, 0.4),
         1px 0px 4px 4px rgba(74, 74, 74, 0.4);
 }
 
-.section-servicio #openGallery,
-.section-gallery #closeGallery {
+.section-servicio .openGallery,
+.section-gallery .closeGallery {
     background-color: var(--redPrime);
 }
 
 /* GALLERY */
-.section-gallery .container {
-    position: relative;
+
+/* contenedor de imagenes ***********************/
+.section-gallery .contenedor {
+    margin: 10%;
+    /* border: 1px solid black; */
 }
 
-.section-gallery .container .arrow {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    background-color: sandybrown;
-}
-.section-gallery .container .arrow-left {
-    left: 0px;
+.section-gallery .row-content {
+    /* border: 1px solid red; */
+    overflow: hidden;
 }
 
-.section-gallery .container .arrow-right {
-    right: 0px;
+.section-gallery .content-images {
+    /* width: calc(calc(100% / 3) * --numberElements); */
+    width: calc(33.3% * 6);
+    font-size: 0pt;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+}
+
+.section-gallery .box-image {
+    display: inline-flex;
+    width: calc(100% / 6);
+    /* border: 1px solid green; */
+    justify-content: center;
+    align-items: center;
 }
 
 .section-gallery .card {
-    box-shadow: 1px 0px 2px 2px rgba(0, 0, 0, 0.5),
-        -1px 0px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: margin 0.5s 0s ease;
+    margin: 5%;
+}
+
+.section-gallery .card:hover {
+    /* transition: width 0.5s 0s ease; */
+    transition: margin 0.5s 0s ease;
+    /* width: 100%; */
+    margin: 0%;
+}
+
+.section-gallery .card img {
+    width: 100%;
+    height: auto;
+}
+
+.section-gallery .closeGallery {
+    width: 50%;
+    margin: 4px 25%;
+}
+
+/* flechas izquierda y derecha */
+.section-gallery .row-carriers {
+    position: relative;
+}
+
+.section-gallery .row-carriers .arrow {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    /* border: 2px solid green; */
+    background-color: transparent;
+    opacity: 0.2;
+}
+
+.section-gallery .row-carriers .arrow:hover {
+    opacity: 1;
+}
+
+.section-gallery .row-carriers .arrow-left {
+    left: 0px;
+}
+
+.section-gallery .row-carriers .arrow-right {
+    right: 0px;
 }

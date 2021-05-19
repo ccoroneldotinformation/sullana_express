@@ -23,12 +23,19 @@
 
 @media (max-width: 767.98px) {
     .section-beneficios .title {
-        /* font-family: 'Poppin', 'Arial'; */
         font-weight: 600;
         font-size: 2em;
     }
 
     .section-beneficios .subtitle {
         font-size: 1.5em;
+    }
+
+    .section-beneficios img {
+        width: 60%;
+    }
+
+    .section-beneficios .row .col-6 .text-center {
+        font-size: 0.8em;
     }
 }

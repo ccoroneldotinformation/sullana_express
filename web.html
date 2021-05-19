@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!-- Bootstrap 4.6 -->
+  <link rel="stylesheet" href="resources/bootstrap_v4.6.0/css/bootstrap.min.css">
 
   <!-- Bootstrap-Datepicker 1.9.0 -->
   <link rel="stylesheet" href="resources/bootstrap_datepicker_v1.9.0/css/bootstrap-datepicker.standalone.css">
@@ -130,63 +131,99 @@
 
   </section>
 
-  <section class="section-servicios container-fluid p-0">
+  <!-- <section class="section-servicios container-fluid p-0"> -->
 
-    <section class="section-servicio">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
-            <img src="assets/img/servicio-black-1.svg" class="img-fluid my-2 w-50" alt="black">
-            <span>SERVICIO A</span>
-            <span>BORDO</span>
-            <img src="assets/img/servicio-black-2.svg" class="img-fluid my-2 w-75" alt="caracteristicas">
-            <button id="openGallery" type="button" class="btn text-white my-2 w-75">Ver Galeria</button>
-          </div>
-          <div class="col-md-6 d-flex">
-            <img src="assets/img/black-plan.jpg" class="img-fluid align-self-center" alt="black plan">
-          </div>
+  <section class="section-servicio border border-white">
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-description col-md-6 d-flex flex-column justify-content-center align-items-start">
+          <img src="assets/img/servicios/servicio-black-1.svg" class="img-fluid my-2 w-50" alt="black">
+          <span>SERVICIO A</span>
+          <span>BORDO</span>
+          <img src="assets/img/servicios/servicio-black-2.svg" class="img-fluid my-2 w-75" alt="caracteristicas">
+          <button id="black" type="button" class="openGallery btn text-white my-2 w-75">Ver Galeria</button>
+        </div>
+        <div class="col-image col-md-6 d-flex">
+          <img src="assets/img/servicios/black-1.jpg" class="img-fluid align-self-center" alt="black 1">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="section section-gallery my-5 d-none">
-      <div class="container my-2">
-        <div class="row my-2 d-flex justify-content-end">
-          <button id="closeGallery" type="button" class="btn text-white">
-            <span><i class="fas fa-backspace"></i></span>
-          </button>
+  <section class="section-servicio border border-white">
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-image col-md-6 d-flex">
+          <img src="assets/img/servicios/imperial-1.jpg" class="img-fluid align-self-center" alt="imperial 1">
+        </div>
+        <div class="col-description col-md-6 d-flex flex-column justify-content-center align-items-start">
+          <img src="assets/img/servicios/servicio-imperial-1.svg" class="img-fluid my-2 w-50" alt="imperial">
+          <span>SERVICIO A</span>
+          <span>BORDO</span>
+          <img src="assets/img/servicios/servicio-imperial-2.svg" class="img-fluid my-2 w-75" alt="caracteristicas">
+          <button id="imperial" type="button" class="openGallery btn text-white my-2 w-75">Ver Galeria</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section-servicio border border-white">
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-description col-md-6 d-flex flex-column justify-content-center align-items-start">
+          <img src="assets/img/servicios/servicio-plus-1.svg" class="img-fluid my-2 w-50" alt="plus">
+          <span>SERVICIO A</span>
+          <span>BORDO</span>
+          <img src="assets/img/servicios/servicio-plus-2.svg" class="img-fluid my-2 w-75" alt="caracteristicas">
+          <button id="plus" type="button" class="openGallery btn text-white my-2 w-75">Ver Galeria</button>
+        </div>
+        <div class="col-image col-md-6 d-flex">
+          <img src="assets/img/servicios/plus-1.jpg" class="img-fluid align-self-center" alt="plus 1">
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card text-center overflow-hidden m-4 border-0">
-              <img src="assets/img/galeria-1.PNG" class="card-img" alt="...">
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card text-center overflow-hidden h-100 border-0">
-              <img src="assets/img/galeria-2.PNG" class="card-img h-100" alt="...">
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card text-center overflow-hidden m-4 border-0">
-              <img src="assets/img/galeria-3.PNG" class="card-img" alt="...">
-            </div>
-          </div>
+    </div>
+  </section>
+
+  <section class="section-servicio border border-white">
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-image col-md-6 d-flex">
+          <img src="assets/img/servicios/suite-1.jpg" class="img-fluid align-self-center" alt="suite 1">
         </div>
-        <button class="arrow arrow-left d-flex bg-transparent border-0">
+        <div class="col-description col-md-6 d-flex flex-column justify-content-center align-items-start">
+          <img src="assets/img/servicios/servicio-suite-1.svg" class="img-fluid my-2 w-50" alt="suite">
+          <span>SERVICIO A</span>
+          <span>BORDO</span>
+          <img src="assets/img/servicios/servicio-suite-2.svg" class="img-fluid my-2 w-75" alt="caracteristicas">
+          <button id="suite" type="button" class="openGallery btn text-white my-2 w-75">Ver Galeria</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- </section> -->
+
+  <div class="section section-gallery my-5 d-none border border-white">
+    <div class="contenedor">
+      <div class="row-content row-carriers">
+        <div class="content-images">
+
+        </div>
+        <button id="arrow-left" class="arrow arrow-left border-0">
           <img src="assets/img/arrow-left.svg" class="my-auto align-self-center" alt="">
         </button>
-        <button class="arrow arrow-right d-flex bg-transparent border-0">
+        <button id="arrow-right" class="arrow arrow-right border-0">
           <img src="assets/img/arrow-right.svg" class="my-auto align-self-center" alt="">
         </button>
       </div>
+      <div class="row-content row-buttons">
+        <button type="button" class="closeGallery btn text-white">Volver</button>
+      </div>
     </div>
+  </div>
 
-  </section>
-
-  <section class="section-envios container-fluid border border-white">
+  <section class="section-envios container-fluid d-none border border-white">
     <div class="row my-4">
       <div class="col-md-4 col-sx-6 mx-2">
         <a class="navbar-brand w-50" href="index.html">
@@ -237,13 +274,9 @@
   </section>
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-    crossorigin="anonymous"></script>
-
+  <!-- scripts de bootstrap 4.6 -->
+  <script src="resources/jquery_v3.6/jquery-3.6.0.min.js"></script>
+  <script src="resources/bootstrap_v4.6.0/js/bootstrap.bundle.min.js"></script>
 
   <!-- scripts select2 -->
   <script src="resources/select2_v4.0.3/js/select2.min.js"></script>
