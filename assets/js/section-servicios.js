@@ -25,51 +25,144 @@ $(document).ready(function (event) {
         { servicio: 'suite', nombre: 'suite-8', tipo: 'jpg' },
     ]
 
+    let current_index_image_center = -1
+    let carriers_lenght = 0
+    let carriers = []
+    let content_images = $('.section-gallery .content-images')
+
     $('.openGallery').click(function (event) {
-        let target = event.target.id
-        let carriers = []
+        // ubicamos nombre del servicio
+        let idServicio = event.target.id
+
+        // ponemos la imagen del servicio
+        $('.section-gallery .row-service img').attr(
+            'src',
+            'assets/img/servicios/servicio-' + idServicio + '-1.svg'
+        )
+
+        // separamos los items que corresponden a los servicios
         $.each(images, function (index, value) {
-            if (value.servicio == target) {
+            if (value.servicio == idServicio) {
                 carriers.push(value)
             }
         })
 
-        const n = carriers.length
+        const break_point_md = 768
+        if ($(window)[0].innerWidth >= break_point_md) {
+            // aniadimos solo 3 imagenes del servicio seleccionado
+            carriers_lenght = carriers.length
+            content_images[0].innerHTML = ''
+            for (let index = 0; index < 3; index++) {
+                content_images[0].append(boxImage(carriers, index))
+            }
 
-        let content_images = $('.section-gallery .content-images')
-        content_images[0].innerHTML = ''
-        $.each(carriers, function (index, value) {
-            content_images[0].innerHTML +=
-                '<div class="box-image"><div class="card border-0">' +
-                '<img src="assets/img/servicios/' +
-                value.nombre +
-                '.' +
-                value.tipo +
-                '" class="" alt="">' +
-                '</div></div>'
-        })
+            current_index_image_center = 1
+            content_images.css('width', '100%')
+            $('.section-gallery .box-image').css('width', '33.33%')
+        } else {
+            carriers_lenght = carriers.length
+            content_images.empty()
+            content_images = $('.section-gallery .row-carriers')
+            content_images[0].innerHTML = ''
+            for (let index = 0; index < carriers_lenght; index++) {
+                content_images[0].append(boxImage(carriers, index))
+            }
 
-        content_images.css('width', 'calc(33.3% * ' + n)
-        $('.section-gallery .box-image').css('width', 'calc(100% / ' + n)
-
-        // if (n <= 3) {
-        //     $('.section-gallery .row-carriers .arrow').css('display', 'none')
-        // } else {
-        //     $('.section-gallery .row-carriers .arrow-right').addClass('d-flex')
-        //     $('.section-gallery .row-carriers .arrow-left').addClass('d-none')
-        // }
+            $('.section-gallery .contenedor').addClass('container')
+            $('.section-gallery .row-content').addClass('row')
+            $('.section-gallery .row-service').addClass([
+                'd-flex',
+                'justify-content-center',
+                'align-items-center',
+            ])
+            $('.section-gallery .box-image').addClass([
+                'col-xs-12',
+                'col-sm-6',
+                'my-4',
+            ])
+            $('.section-gallery .box-image img').addClass([
+                'img-fluid',
+                'rounded',
+            ])
+            $('.section-gallery .row-buttons').addClass([
+                'd-flex',
+                'justify-content-center',
+                'align-items-center',
+            ])
+            $('.section-gallery .row-buttons button').addClass('w-50')
+        }
 
         $('.section-gallery').removeClass('d-none')
         $('.section-servicio').addClass('d-none')
     })
+
     $('.closeGallery').click(function (event) {
         $('.section-gallery').addClass('d-none')
         $('.section-servicio').removeClass('d-none')
     })
 
-    $('.arrow').click(function (event) {
-        let idSide = event.target.id
-    })
+    if ($(window)[0].innerWidth >= break_point_md) {
+        $('.arrow').click(function (event) {
+            let idSide = event.target.id
+            let preview_index_image =
+                (carriers_lenght + current_index_image_center - 2) %
+                carriers_lenght
+            let next_index_image =
+                (current_index_image_center + 2) % carriers_lenght
+            if (idSide == 'arrow-left') {
+                let box_card = boxImage(carriers, preview_index_image)
+                box_card.style.width = '33.33%'
+                box_card.style.marginLeft = '-33.33%'
+                content_images[0].prepend(box_card)
+                let box_image = $('.section-gallery .box-image')
+                box_image.addClass('animation-toRight')
+                setTimeout(function (e) {
+                    content_images[0].removeChild(box_image[3])
+                    box_image = $('.section-gallery .box-image')
+                    box_image.css('margin-left', '0%')
+                    box_image.removeClass('animation-toRight')
+                }, 800)
+                current_index_image_center--
+                current_index_image_center =
+                    (carriers_lenght + current_index_image_center) %
+                    carriers_lenght
+            }
+            if (idSide == 'arrow-right') {
+                let box_card = boxImage(carriers, next_index_image)
+                box_card.style.width = '33.33%'
+                box_card.style.marginLeft = '0%'
+                box_card.style.marginRight = '-33.33%'
+                content_images[0].append(box_card)
+                let box_image = $('.section-gallery .box-image')
+                box_image.addClass('animation-toLeft')
+                setTimeout(function (e) {
+                    content_images[0].removeChild(box_image[0])
+                    box_image = $('.section-gallery .box-image')
+                    box_image.css('margin-right', '0%')
+                    box_image.removeClass('animation-toLeft')
+                }, 800)
+                current_index_image_center++
+                current_index_image_center =
+                    current_index_image_center % carriers_lenght
+            }
+            // console.log(current_index_image_center)
+        })
+
+        $('.icon-row').click(function (event) {
+            console.log(event.target.parentNode)
+            event.target.parentNode.click()
+        })
+    }
 })
 
-// section-gallery
+function boxImage(carriers, index_carrier) {
+    let carrier = carriers[index_carrier]
+    return $(
+        '<div class="box-image"><div class="card border-0">' +
+            '<img src="assets/img/servicios/' +
+            carrier.nombre +
+            '.' +
+            carrier.tipo +
+            '" class="image-gallery" alt=""></div></div>'
+    )[0]
+}

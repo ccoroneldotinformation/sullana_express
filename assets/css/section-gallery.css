@@ -38,80 +38,135 @@
     background-color: var(--redPrime);
 }
 
-/* GALLERY */
+@media screen and (min-width: 768px) {
+    /* GALLERY */
 
-/* contenedor de imagenes ***********************/
-.section-gallery .contenedor {
-    margin: 10%;
-    /* border: 1px solid black; */
-}
+    /* ********* titulos de servicio ********** */
 
-.section-gallery .row-content {
-    /* border: 1px solid red; */
-    overflow: hidden;
-}
+    .section-gallery .row-service {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.section-gallery .content-images {
-    /* width: calc(calc(100% / 3) * --numberElements); */
-    width: calc(33.3% * 6);
-    font-size: 0pt;
-    /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-}
+    .section-gallery .row-service img {
+        height: 6em;
+        width: auto;
+        text-align: center;
+    }
 
-.section-gallery .box-image {
-    display: inline-flex;
-    width: calc(100% / 6);
-    /* border: 1px solid green; */
-    justify-content: center;
-    align-items: center;
-}
+    /* contenedor de imagenes ***********************/
+    .section-gallery .contenedor {
+        margin: 10%;
+    }
 
-.section-gallery .card {
-    transition: margin 0.5s 0s ease;
-    margin: 5%;
-}
+    .section-gallery .content-images {
+        font-size: 0pt;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
 
-.section-gallery .card:hover {
-    /* transition: width 0.5s 0s ease; */
-    transition: margin 0.5s 0s ease;
-    /* width: 100%; */
-    margin: 0%;
-}
+    .section-gallery .box-image {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.section-gallery .card img {
-    width: 100%;
-    height: auto;
-}
+    .section-gallery .card {
+        transition: margin 0.5s 0s ease;
+        margin: 5%;
+        border-radius: 10px;
+        box-shadow: 1px 0px 2px 2px rgba(74, 74, 74, 0.5),
+            -1px 0px 2px 2px rgba(74, 74, 74, 0.5);
+        overflow: hidden;
+    }
 
-.section-gallery .closeGallery {
-    width: 50%;
-    margin: 4px 25%;
-}
+    .section-gallery .card:hover {
+        transition: margin 0.5s 0s ease;
+        margin: 0%;
+    }
 
-/* flechas izquierda y derecha */
-.section-gallery .row-carriers {
-    position: relative;
-}
+    .section-gallery .card img {
+        width: 100%;
+        height: auto;
+    }
 
-.section-gallery .row-carriers .arrow {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    /* border: 2px solid green; */
-    background-color: transparent;
-    opacity: 0.2;
-}
+    .section-gallery .row-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.section-gallery .row-carriers .arrow:hover {
-    opacity: 1;
-}
+    .section-gallery .closeGallery {
+        width: 33.33%;
+        margin: 2em auto;
+        box-shadow: 1px 1px 1px 1px rgba(74, 74, 74, 0.2),
+            -1px -1px 1px 1px rgba(74, 74, 74, 0.2);
+    }
 
-.section-gallery .row-carriers .arrow-left {
-    left: 0px;
-}
+    .section-gallery .closeGallery:hover {
+        box-shadow: 1px 1px 1px 1px rgba(74, 74, 74, 0.6),
+            -1px -1px 1px 1px rgba(74, 74, 74, 0.6);
+    }
 
-.section-gallery .row-carriers .arrow-right {
-    right: 0px;
+    /* ********** flechas ********** */
+    .section-gallery .row-carriers {
+        position: relative;
+    }
+
+    .section-gallery .row-carriers .arrow {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        background-color: transparent;
+        opacity: 0.4;
+        font-size: 0.8em;
+    }
+
+    .section-gallery .row-carriers .arrow:hover {
+        opacity: 0.9;
+    }
+
+    .section-gallery .row-carriers .arrow-left {
+        right: 100%;
+    }
+
+    .section-gallery .row-carriers .arrow-right {
+        left: 100%;
+    }
+
+    /* animaciones ************ */
+
+    .animation-toRight {
+        animation-name: moveToRight;
+        animation-duration: 0.8s;
+        animation-timing-function: ease-in;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes moveToRight {
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    .animation-toLeft {
+        animation-name: moveToLeft;
+        animation-duration: 0.8s;
+        animation-timing-function: ease-in;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes moveToLeft {
+        100% {
+            transform: translateX(-100%);
+        }
+    }
 }
