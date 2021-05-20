@@ -3,8 +3,8 @@ $(document).ready(function (event) {
     let images = [
         { servicio: 'black', nombre: 'black-1', tipo: 'jpg' },
         { servicio: 'black', nombre: 'black-2', tipo: 'jpg' },
-        { servicio: 'black', nombre: 'black-3', tipo: 'jpg' },
-        { servicio: 'black', nombre: 'black-4', tipo: 'jpg' },
+        { servicio: 'black', nombre: 'black-3', tipo: 'JPG' },
+        { servicio: 'black', nombre: 'black-4', tipo: 'JPG' },
         { servicio: 'black', nombre: 'black-5', tipo: 'jpg' },
         { servicio: 'imperial', nombre: 'imperial-1', tipo: 'jpg' },
         { servicio: 'imperial', nombre: 'imperial-2', tipo: 'jpg' },
