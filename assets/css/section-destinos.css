@@ -1,0 +1,46 @@
+:root {
+    --bluePrime: #444290;
+    --grayPrime: rgb(74, 74, 74);
+    --graySecond: rgb(235, 235, 235);
+    --redPrime: #ed3237;
+}
+
+/* titulos */
+
+.section-destinos {
+    font-family: 'Poppin', 'Arial';
+    font-size: 16pt;
+}
+
+.section-destinos .title {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+/* destinos */
+
+.toRight {
+    transition: transform 1s 0.2s ease;
+    transform: translateX(12.5%);
+}
+
+.toLeft {
+    transition: transform 1s 0.2s ease;
+    transform: translateX(-12.5%);
+}
+
+.section-destinos .row-targets .card-title {
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--grayPrime);
+}
+.section-destinos .row-targets .card-text {
+    font-weight: normal;
+    font-size: 0.8em;
+    color: var(--grayPrime);
+}
+
+.section-destinos .row-targets .col-description,
+.section-destinos .row-targets .col-figure {
+    background-color: var(--graySecond);
+}
